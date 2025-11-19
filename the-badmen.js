@@ -5,6 +5,15 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+import "./badmen-navbar.js";
+import "./badmen-layout.js";
+import "./badmen-signup.js";
+import "./badmen-teamname.js";
+import "./badmen-calendar.js";
+import "./badmen-joinus.js";
+import "./badmen-infoboxes.js";
+import "./badmen-datecard.js";
+import "./badmen-stats.js";
 
 /**
  * `the-badmen`
@@ -63,8 +72,8 @@ export class TheBadmen extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  
-  
+  <h3><span>${this.t.title}:</span> ${this.title}</h3>
+  <slot></slot>
 </div>`;
   }
 
