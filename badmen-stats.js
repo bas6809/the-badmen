@@ -8,7 +8,8 @@ export class badmenStats extends LitElement {
   static get properties() {
     return {
       number: { type: String },
-      label: { type: String }
+      label: { type: String },
+      color: { type: String }
     };
   }
 
@@ -16,51 +17,61 @@ export class badmenStats extends LitElement {
     super();
     this.number = "0";
     this.label = "";
-    
+    this.color = "";
   }
 
-
+  // ✅ Handles color attribute
+  updated(changedProps) {
+    if (changedProps.has("color") && this.color) {
+      this.style.setProperty("--number-color", this.color);
+    }
+  }
 
   static get styles() {
     return css`
-    :host {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      :host {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        max-width: 100%;
+        padding: 16px;
+        border-radius: var(--ddd-radius-sm);
+        border: 1px solid black;
 
-      width: 100%;           
-      padding: 40px 0;       
+        background: var(--stat-color, var(--ddd-theme-default-roarLight));
 
-      background: #2f2f2f;
-      border-radius: 12px;
-
-      color: white;
-      text-align: center;
-
-      box-sizing: row;
+        box-sizing: border-box;
+        text-align: center;
       }
 
-      .number {
-        font-size: 136px;
-        font-weight: 250;
-        margin-bottom: 4px;
-        color: #38f3b1;
-      }
+    .number {
+  font-family: var(--ddd-font-secondary);
+  font-weight: var(--ddd-font-weight-black);
+  font-size: clamp(36px, 18vw, 250px);
+  letter-spacing: var(--ddd-spacing-3);
+  color: var(--number-color, var(--ddd-theme-default-opportunityGreen)); 
+  margin-bottom: 8px;
+  line-height: 1;
+}
 
-      .label {
-        font-size: 36px;
-        
-      }
-     
+.label {
+  color: var(--ddd-theme-default-coalyGray); /* label stays default color */
+  font-family: var(--ddd-font-secondary);
+  font-weight: var(--ddd-font-weight-regular);
+  font-size: clamp(16px, 4vw, 24px);
+  line-height: 1.2;
+}
+
+
     `;
   }
 
   render() {
     return html`
-    
-     <div class="number">${this.number}</div>
-      <div class="label">${this.label}</div> 
+      <div class="number">${this.number}</div>
+      <div class="label">${this.label}</div>
     `;
   }
 }

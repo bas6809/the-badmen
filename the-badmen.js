@@ -108,6 +108,40 @@ export class TheBadmen extends DDDSuper(I18NMixin(LitElement)) {
         display: none; /* Chrome/Safari */
       }
 
+
+      /*CSS FOR THE STAT BOXES:*/
+      .stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;              /* spacing between stat boxes */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+  padding-top: 144px;
+  box-sizing: border-box;
+}
+
+/* Mobile stacking */
+@media (max-width: 600px) {
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-row > badmen-stats {
+    width: 100%;
+    max-width: 360px;     /* keeps them from getting too wide */
+  }
+}
+
+/* Desktop: hug content */
+@media (min-width: 601px) {
+  .stats-row > badmen-stats {
+    width: fit-content;
+  }
+}
+
+
     `];
   }
 
@@ -217,9 +251,10 @@ render() {
     </div>
          
     <div class="stats-row">
-      <badmen-stats number="10" label="Championships"></badmen-stats>
-      <badmen-stats number="450" label="Active Players"></badmen-stats>
-      <badmen-stats number="34" label="Coaches"></badmen-stats>
+      <badmen-stats number="10" label="Championships" color=var(--ddd-theme-default-opportunityGreen)></badmen-stats>
+<badmen-stats number="450" label="Active Players" color="var(--ddd-theme-default-coalyGray)"></badmen-stats>
+<badmen-stats number="34" label="Coaches" color="var(--ddd-theme-default-keystoneYellow)"></badmen-stats>
+
       </div>
       
 

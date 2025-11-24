@@ -12,8 +12,7 @@ export class badmenDatecard extends LitElement {
       event: {type: String},
       date: { type: String },
       location: { type: String },
-      time: { type: String },
-      ageGroup: { type: String }
+      time: { type: String }
     };
   }
 
@@ -23,14 +22,13 @@ export class badmenDatecard extends LitElement {
     this.date = "";
     this.location = "";
     this.time = "";
-    this.ageGroup = "";
   }
 
   static get styles() {
     return css`
       :host {
         display: inline-block;
-        max-width: 350px;
+        max-width: 400px;
         background: var(--ddd-theme-default-roarLight);
         border-radius: 4px;
         padding: 8px;
