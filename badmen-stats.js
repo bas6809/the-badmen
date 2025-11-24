@@ -58,7 +58,7 @@ export class badmenStats extends LitElement {
   font-family: var(--ddd-font-secondary);
   font-weight: var(--ddd-font-weight-regular);
   font-size: clamp(16px, 4vw, 24px);
-  line-height: 1.2;
+  line-height: 2;
 }
 
 
