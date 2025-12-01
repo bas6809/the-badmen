@@ -109,6 +109,51 @@ export class TheBadmen extends DDDSuper(I18NMixin(LitElement)) {
   width: 100%;
   box-sizing: border-box;
 }
+      
+
+
+
+  .who-we-are-heading {
+      font-family: var(--ddd-font-navigation);
+      font-weight: var(--ddd-font-weight-black);
+      font-size: clamp(24px, 6vw, 56px);
+      letter-spacing: var(--ddd-spacing-1);
+      color: var(--ddd-theme-default-roarLight);
+      padding-left: clamp(24px, 6vw, 144px);
+      padding-top: 72px;
+}
+
+  .who-we-are-body {
+      font-family: var(--ddd-font-navigation);
+      font-weight: 100;
+      font-size: clamp(12px, 6vw, 24px);
+      color: var(--ddd-theme-default-roarLight);
+      padding-left: clamp(24px, 6vw, 144px);
+      padding-bottom: 16px;
+      padding-right: clamp(24px, 6vw, 144px);
+}
+
+  .our-mission-heading {
+      font-family: var(--ddd-font-navigation);
+      font-weight: var(--ddd-font-weight-black);
+      font-size: clamp(24px, 6vw, 56px);
+      letter-spacing: var(--ddd-spacing-1);
+      color: var(--ddd-theme-default-roarLight);
+      padding-left: clamp(24px, 6vw, 144px);
+      padding-top: 0px;
+}
+
+  .our-mission-body {
+      font-family: var(--ddd-font-navigation);
+      font-weight: 100;
+      font-size: clamp(12px, 6vw, 24px);
+      color: var(--ddd-theme-default-roarLight);
+      padding-left: clamp(24px, 6vw, 144px);
+      padding-bottom: 72px;
+      padding-right: clamp(24px, 6vw, 144px);
+}
+
+
     `];
   }
 
@@ -216,13 +261,24 @@ render() {
       location="Westside Community Gym, 300 Blue Course Dr, State College PA"
       ageGroup="All ages welcome">
 </badmen-datecard>
+</div>
 
-    </div>
-    </div>
-         
+<div class="about-section">
+   <div class="left-section">
+<div class ="who-we-are-heading">Who are the BADMEN?</div>
+<div class ="who-we-are-body">The Badmen are a premier badminton organization based in State College, Pennsylvania, known for their competitive spirit and strong community presence. With eight championship titles, the team has built a reputation for excellence across local and regional leagues. The club boasts a thriving membership of over 125 active players, ranging from beginners to advanced competitors. Supported by 17 dedicated coaches, the Badmen focus on skill development, sportsmanship, and year-round training opportunities. Their program includes a robust U-18 youth division, where young athletes receive structured coaching and competitive play. In addition, the Badmen run a vibrant adult league, welcoming players of all ages looking to improve or compete. The organization regularly hosts tournaments, workshops, and community events to promote the sport. Together, the Badmen continue to grow badminton’s presence in State College while cultivating a strong and supportive athletic community.</div>
+</div>
+<div class="our-mission-section">
+   <div class="right-section">
+<div class ="our-mission-heading">Our Mission:</div>
+<div class ="our-mission-body">At the Badmen, our mission is to grow a passionate, inclusive, and high-performing badminton community in State College and beyond. We strive to provide athletes of all ages with access to quality coaching, competitive opportunities, and a supportive environment that encourages personal growth. Through dedication, discipline, and teamwork, we aim to help every player—youth and adult—reach their full potential on and off the court. We are committed to promoting sportsmanship, fostering lifelong friendships, and inspiring a love for badminton within our community. Our mission also includes creating accessible pathways for new players, offering structured training for developing athletes, and supporting advanced competitors as they prepare for higher-level play. We believe in maintaining a culture where every member feels seen and supported, regardless of age or skill level. Through events, tournaments, outreach programs, and year-round training, we work to strengthen both individual confidence and community connection. Above all, we strive to make the Badmen a place where players feel challenged, valued, and truly proud to belong.
+</div>
+
+
+     
     <div class="stats-banner">
 <badmen-stats number="8" label="CHAMPIONSHIPS" color=var(--ddd-theme-default-shrineMaxLight)></badmen-stats>
-<badmen-stats number="123+" label="ACTIVE PLAYERS" color="var(--ddd-theme-default-shrineMaxLight)"></badmen-stats>
+<badmen-stats number="125+" label="ACTIVE PLAYERS" color="var(--ddd-theme-default-shrineMaxLight)"></badmen-stats>
 <badmen-stats number="17" label="COACHES" color="var(--ddd-theme-default-shrineMaxLight)"></badmen-stats>
 
       </div>
