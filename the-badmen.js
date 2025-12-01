@@ -100,50 +100,15 @@ export class TheBadmen extends DDDSuper(I18NMixin(LitElement)) {
         display: none; /* Chrome/Safari */
       }
 /*CSS FOR THE STAT BOXES:****************************************************/
-      .stats-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        padding: 20px 0;
-      }
-      .stats-row {
-        display: flex;
-        flex-wrap: nowrap;     /* prevent wrapping so dividers stay aligned */
-        gap: 40px;             /* spacing between stats */
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        padding-top: 72px;
-        box-sizing: border-box;
-      }
-      /* Mobile stacking */
-      @media (max-width: 600px) {
-        .stats-row {
-          flex-direction: column;
-          align-items: center;
-        }
-        .stats-row > badmen-stats {
-          width: 100%;
-          max-width: 360px;     /* keeps them from getting too wide */
-        }
-      }
-      /* Desktop: hug content */
-      @media (min-width: 601px) {
-        .stats-row > badmen-stats {
-          width: fit-content;
-        }
-      }
+     
       .stats-banner {
-  background-color: var(--ddd-theme-default-opportunityGreen);         /* solid green banner */
-  display: flex;                   /* arrange stats horizontally */
-  justify-content: center;         /* center the stats */
-  align-items: center;             /* vertical alignment */
+  background-color: var(--ddd-theme-default-opportunityGreen);         
+  display: flex;                  
+  justify-content: center;        
+  align-items: center;            
   width: 100%;
   box-sizing: border-box;
 }
-
     `];
   }
 
