@@ -9,7 +9,7 @@ import "./badmen-navbar.js";
 import "./badmen-layout.js";
 import "./badmen-signup.js";
 import "./badmen-teamname.js";
-import "./badmen-calendar.js";
+import "./badman-calender.js";
 import "./badmen-joinus.js";
 import "./badmen-infoboxes.js";
 import "./badmen-datecard.js";
@@ -197,38 +197,6 @@ export class TheBadmen extends DDDSuper(I18NMixin(LitElement)) {
 
 
 
-.court-image {
-  position: relative;
-  width: 100%;
-  max-width: 90vw;           /* container scales with viewport */
-  margin: 0 auto;
-  padding-top: 56.25%;       /* maintains 16:9 aspect ratio (adjust if needed) */
-  overflow: visible;
-}
-
-.badminton-court-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 90%;               /* fill container height */
-  max-height: 100%;
-  transform: translate(-50%, -50%) rotate(90deg); /* rotate and center */
-  transform-origin: center center;
-  display: block;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .court-image {
-    padding-top: 75%;        /* taller aspect ratio on narrow screens */
-  }
-
-  .badminton-court-image {
-    height: 80%;
-  }
-}
-
 
 
 
@@ -379,11 +347,7 @@ render() {
     </badmen-infoboxes>
 </div>
 
-<div class="court-image">
-      <img
-        class="badminton-court-image"
-        src="https://cdn.vectorstock.com/i/1000v/93/34/aerial-view-of-badminton-court-vector-5639334.jpg"
-      />
+
 
 
 
@@ -408,8 +372,8 @@ render() {
       <h2>Layout</h2>
       <badmen-layout></badmen-layout>
 
-      <h2>Calendar</h2>
-      <badmen-calendar></badmen-calendar>
+      <h2>Calender</h2>
+      <badman-calender></badman-calender>
 
       <h2>Signup</h2>
       <badmen-signup></badmen-signup>

@@ -1,8 +1,8 @@
 import { LitElement, html, css } from "lit";
 
-export class BadmenCalendar extends LitElement {
+export class BadmanCalender extends LitElement {
   static get tag() {
-    return "badmen-calendar";
+    return "badman-calender";
   }
 
   static get properties() {
@@ -117,11 +117,11 @@ export class BadmenCalendar extends LitElement {
     }
 
     return html`
-      <div class="multi-calendar">
+      <div class="multi-calender">
         ${calendars}
       </div>
     `;
   }
 }
 
-customElements.define(BadmenCalendar.tag, BadmenCalendar);
+customElements.define(BadmanCalender.tag, BadmanCalender);

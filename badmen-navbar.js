@@ -87,13 +87,7 @@ li {
   font-size: clamp(16px, 2vw, 24px);
   display: flex;
   align-items: center;
-}
-
-
- 
-    
-    
-     
+}      
     `;
   }
 
