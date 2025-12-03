@@ -370,11 +370,11 @@ render() {
       submessage="Donate Here">
     </badmen-infoboxes>
      <badmen-infoboxes 
-      message="CONTACT US!"
+      message="CONTACT THE BADMEN!"
       submessage="Here">
     </badmen-infoboxes>
      <badmen-infoboxes 
-      message="JOIN US!"
+      message="JOIN THE BADMEN!"
       submessage="Join">
     </badmen-infoboxes>
 </div>
