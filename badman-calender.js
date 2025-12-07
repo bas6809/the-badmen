@@ -1,8 +1,8 @@
 import { LitElement, html, css } from "lit";
 
-export class BadmanCalender extends LitElement {
+export class BadmenCalendar extends LitElement {
   static get tag() {
-    return "badman-calender";
+    return "badmen-calendar";
   }
 
   static get properties() {
@@ -18,7 +18,7 @@ export class BadmanCalender extends LitElement {
 
   static get styles() {
     return css`
-      :host {
+      host {
         display: block;
         padding: 20px;
       }
@@ -46,7 +46,6 @@ export class BadmanCalender extends LitElement {
         border-collapse: collapse;
       }
 
-      th,
       td {
         border: 1px solid #ddd;
         text-align: center;
@@ -117,11 +116,11 @@ export class BadmanCalender extends LitElement {
     }
 
     return html`
-      <div class="multi-calender">
+      <div class="multi-calendar">
         ${calendars}
       </div>
     `;
   }
 }
 
-customElements.define(BadmanCalender.tag, BadmanCalender);
+customElements.define(BadmenCalender.tag, BadmenCalender);
